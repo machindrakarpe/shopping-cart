@@ -1,4 +1,4 @@
-package com.shopping;
+package com.shopping.cart;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -40,16 +40,5 @@ public class Cart {
 
     private BigDecimal costPerItem(Item item) {
         return item.getPrice().multiply(BigDecimal.valueOf(item.getQuantity()));
-    }
-
-    public void details() {
-
-        System.out.println("Name \t  Quantity \tPrice");
-        items.forEach(i -> System.out.println(i.getName() + "\t\t" + i.getQuantity() + "\t\t" + i.getPrice()));
-        System.out.println("----------------------------");
-
-        BigDecimal totalPrice = totalPrice();
-
-        System.out.println("Total:\t\t\t   " + totalPrice);
     }
 }

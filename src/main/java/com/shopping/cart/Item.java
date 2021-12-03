@@ -1,4 +1,4 @@
-package com.shopping;
+package com.shopping.cart;
 
 import java.math.BigDecimal;
 

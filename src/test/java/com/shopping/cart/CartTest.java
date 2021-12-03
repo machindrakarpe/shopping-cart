@@ -1,4 +1,4 @@
-package com.shopping;
+package com.shopping.cart;
 
 import org.junit.jupiter.api.Test;
 
@@ -92,14 +92,6 @@ class CartTest {
         cart.add(cake);
 
         assertEquals(BigDecimal.valueOf(13), cart.totalPrice());
-    }
-
-    @Test
-    void shouldPrintCartDetails() {
-        Cart cart = createCartWithAnItemMilk();
-        cart.add(new Item("Milk", BigDecimal.valueOf(2), 1));
-        cart.add(new Item("Bread", BigDecimal.valueOf(3.5), 1));
-        cart.details();
     }
 
     private Cart createCartWithAnItemMilk() {
