@@ -38,10 +38,11 @@ class CartTest {
     void shouldUpdateQuantityWhenItemAlreadyInCart() {
         Cart cart = createCartWithAnItemMilk();
         Item milk = new Item("Milk", BigDecimal.valueOf(2), 2);
+
         cart.add(milk);
+
         List<Item> items = cart.getItems();
         Item updatedCartItem = cart.getItems().get(0);
-
         assertEquals(1, items.size());
         assertEquals(3, updatedCartItem.getQuantity());
         assertEquals("Milk", updatedCartItem.getName());

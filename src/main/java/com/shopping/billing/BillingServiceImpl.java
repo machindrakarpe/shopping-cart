@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 public class BillingServiceImpl implements BillingService {
 
     @Override
-    public void generateBill(Cart cart) {
+    public void generateBill(Cart cart, OutputWriter outputWriter) {
 
         StringBuilder receipt = new StringBuilder("Name \t  Quantity \tPrice\n");
 
@@ -15,6 +15,6 @@ public class BillingServiceImpl implements BillingService {
         receipt.append("----------------------------\n");
         BigDecimal totalPrice = cart.totalPrice();
         receipt.append("Total:\t\t\t\t").append(totalPrice).append("\n");
-        System.out.println(receipt);
+        outputWriter.write(receipt.toString());
     }
 }
